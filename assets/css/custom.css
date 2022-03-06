@@ -2,6 +2,7 @@
   border-bottom: 2px solid lightgray;
   padding: 35px;
 }
+
 #button-img,
 #button-redondo {
   background-color: #dfe6ed;
@@ -16,7 +17,6 @@ img {
 
 .row {
   margin: 0px;
-  /* border: 1px solid green; */
 }
 
 #aside {
@@ -24,7 +24,6 @@ img {
   border-right: 2px solid lightgray;
   border-radius: 0px;
   background-color: #f7f9fa;
-  /* border: 3px solid red; */
 }
 
 #ul-aside {
@@ -45,7 +44,6 @@ img {
 }
 
 #div-perfil {
-  /* border: 3px solid green; */
   padding: 37px 50px 0px 50px;
 }
 
@@ -56,19 +54,21 @@ img {
   border-bottom: 3px solid #e8833a;
 }
 
-#col-perfil {
-  /* border: 1px solid purple; */
+#col-perfil,
+#col-perfil-contato {
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: 50px;
 }
 
-#col-perfil h4 {
+#col-perfil h4,
+#col-perfil-contato h4 {
   color: #4697de;
 }
 
-#col-perfil h5 {
+#col-perfil h5,
+#col-perfil-contato h5 {
   margin: 20px 0px 0px 0px;
 }
 
@@ -80,7 +80,7 @@ img {
 #col-form {
   display: flex;
   flex-direction: column;
-  padding: 50px;
+  padding: 40px 50px;
 }
 
 #col-form input {
@@ -95,11 +95,11 @@ img {
   padding: 53px 0px 53px 0px;
 }
 
-#btn-limpar {
+#limpar {
   background-color: #c3cfd9;
   color: #3c4b57;
 }
 
-#btn-salvar {
+#salvar {
   background-color: #2c88d9;
 }

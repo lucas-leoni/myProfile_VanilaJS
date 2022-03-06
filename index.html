@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM</title>
-    <link rel="stylesheet" href="/assets/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="/assets/custom.css" />
+    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/custom.css" />
   </head>
   <body>
     <nav id="header" class="navbar">
@@ -14,7 +14,7 @@
         <button id="button-img" type="button" class="secondary">
           <img src="/assets/image/image-fill.svg" alt="" />
         </button>
-        <h4>Olá, Pessoa!</h4>
+        <h4 id="exibir-nome-pessoa">Olá, Pessoa!</h4>
       </div>
     </nav>
     <div class="row">
@@ -40,17 +40,18 @@
           </div>
           <div id="col-perfil" class="col-3">
             <h4>Dados gerais:</h4>
-            <h5>__________________</h5>
+            <h5 id="exibir-nome">__________________</h5>
           </div>
           <div id="col-perfil" class="col-3">
             <h4>Documentos:</h4>
-            <h5>CPF: ____________</h5>
-            <h5>RG: ___________</h5>
+            <h5 id="exibir-cpf">CPF: ____________</h5>
+            <h5 id="exibir-rg">RG: ___________</h5>
           </div>
-          <div id="col-perfil" class="col-3">
+          <div id="col-perfil-contato" class="col-3">
             <h4>Contato:</h4>
-            <h5>CEL: _____________</h5>
-            <h5>FIXO: ____________</h5>
+            <h5 id="exibir-celular">Cel: _____________</h5>
+            <h5 id="exibir-fixo">Fixo: ____________</h5>
+            <h5 id="exibir-email"></h5>
           </div>
         </div>
         <nav id="nav-dados" class="navbar">
@@ -62,30 +63,30 @@
           <div class="row">
             <div id="col-form" class="col-4">
               <label><b>Nome</b></label>
-              <input type="text" />
+              <input id="nome" type="text" />
               <label><b>Telefone (celular)</b></label>
-              <input type="tel" />
+              <input id="celular" type="tel" />
             </div>
             <div id="col-form" class="col-4">
               <label><b>CPF</b></label>
-              <input type="text" />
+              <input id="cpf" type="text" />
               <label><b>Telefone (fixo)</b></label>
-              <input type="tel" />
+              <input id="fixo" type="tel" />
             </div>
             <div id="col-form" class="col-4">
               <label><b>RG</b></label>
-              <input type="text" />
+              <input id="rg" type="text" />
               <label><b>E-mail</b></label>
-              <input type="email" />
+              <input id="email" type="email" />
             </div>
           </div>
         </form>
         <nav id="nav-submit" class="navbar">
           <div class="container-fluid">
-            <button id="btn-limpar" type="button" class="btn btn-secondary">
+            <button id="limpar" type="submit" class="btn btn-secondary">
               <b>Limpar</b>
             </button>
-            <button id="btn-salvar" type="button" class="btn btn-primary">
+            <button id="salvar" type="submit" class="btn btn-primary">
               <b>Salvar</b>
             </button>
           </div>
@@ -93,6 +94,7 @@
       </div>
     </div>
 
-    <script src="/assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/app.js"></script>
   </body>
 </html>
