@@ -25,6 +25,7 @@ buttonSalvar.addEventListener("click", function (e) {
   exibirCelular.textContent = "Cel: " + inputCelular.value;
   exibirFixo.textContent = "Fixo: " + inputFixo.value;
   exibirEmail.textContent = inputEmail.value;
+  validacao();
 });
 
 buttonLimpar.addEventListener("click", function (e) {
@@ -43,4 +44,74 @@ buttonLimpar.addEventListener("click", function (e) {
   inputFixo.value = "";
   inputRg.value = "";
   inputEmail.value = "";
+  validacao();
 });
+
+let labelNome = document.getElementById("labelNome");
+let labelCpf = document.getElementById("labelCpf");
+let labelEmail = document.getElementById("labelEmail");
+
+let smallNome = document.createElement("small");
+let smallCpf = document.createElement("small");
+let smallEmail = document.createElement("small");
+
+smallNome.innerText = "Preenchimento obrigatório!";
+smallCpf.innerText = "Preenchimento obrigatório!";
+smallEmail.innerText = "Preenchimento obrigatório!";
+
+smallNome.style.color = "red";
+smallCpf.style.color = "red";
+smallEmail.style.color = "red";
+
+function validacaoForm() {
+  if (
+    inputNome.value === "" ||
+    inputCpf.value === "" ||
+    inputEmail.value === ""
+  ) {
+    buttonSalvar.setAttribute("disabled", "disabled");
+  }
+}
+
+function validacaoButton() {
+  if (
+    inputNome.value !== "" &&
+    inputCpf.value !== "" &&
+    inputEmail.value !== ""
+  ) {
+    buttonSalvar.removeAttribute("disabled");
+    smallCpf.remove();
+    smallEmail.remove();
+  }
+}
+
+function mostraAviso() {
+  if (inputNome.value === "") {
+    labelNome.appendChild(smallNome);
+  }
+  if (inputCpf.value === "") {
+    labelCpf.appendChild(smallCpf);
+  }
+  if (inputEmail.value === "") {
+    labelEmail.appendChild(smallEmail);
+  }
+}
+
+function removeAviso() {
+  if (inputNome.value !== "") {
+    smallNome.remove();
+  }
+  if (inputCpf.value !== "") {
+    smallCpf.remove();
+  }
+  if (inputEmail.value !== "") {
+    smallEmail.remove();
+  }
+}
+
+function validacao() {
+  validacaoForm();
+  validacaoButton();
+  mostraAviso();
+  removeAviso();
+}

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/custom.css" />
   </head>
-  <body>
+  <body onload="validacao()">
     <nav id="header" class="navbar">
       <div id="container" class="container-fluid">
         <button id="button-img" type="button" class="secondary">
@@ -62,22 +62,22 @@
         <form>
           <div class="row">
             <div id="col-form" class="col-4">
-              <label><b>Nome</b></label>
-              <input id="nome" type="text" />
+              <label id="labelNome"><b>Nome</b></label>
+              <input oninput="validacao()" id="nome" type="text" />
               <label><b>Telefone (celular)</b></label>
               <input id="celular" type="tel" />
             </div>
             <div id="col-form" class="col-4">
-              <label><b>CPF</b></label>
-              <input id="cpf" type="text" />
+              <label id="labelCpf"><b>CPF</b></label>
+              <input oninput="validacao()" id="cpf" type="text" />
               <label><b>Telefone (fixo)</b></label>
               <input id="fixo" type="tel" />
             </div>
             <div id="col-form" class="col-4">
               <label><b>RG</b></label>
               <input id="rg" type="text" />
-              <label><b>E-mail</b></label>
-              <input id="email" type="email" />
+              <label id="labelEmail"><b>E-mail</b></label>
+              <input oninput="validacao()" id="email" type="email" />
             </div>
           </div>
         </form>
